@@ -39,7 +39,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_unicentro/textcolor';
     $title = get_string('textcolor', 'theme_unicentro');
     $description = get_string('textcolor_desc', 'theme_unicentro');
-    $default = '#333366';
+    $default = '#1e1e1e';
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
