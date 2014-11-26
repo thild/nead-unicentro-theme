@@ -4,10 +4,19 @@ a.logo {
     background: url([[setting:logo]]) no-repeat 0 0;
     display: block;
     float: left;
-    height: 75px;
-    margin: 0;
+    margin: auto;
+    background-position: 50% center;
+    background-size: contain;
+    background-repeat: no-repeat;
     padding: 0;
     width: 100%;
+    height: auto;
+}
+
+a.logo img.logo-placeholder {
+    height: auto;
+    width: 100%;
+    display: block;
 }
 
 .dir-rtl a.logo {
@@ -19,3 +28,8 @@ a.logo {
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
+
+a.logo {
+
+}
+
