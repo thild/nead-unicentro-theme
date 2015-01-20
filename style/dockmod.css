@@ -1,0 +1,6 @@
+/**
+ * Whilst the dock isn't supported by the base theme this CSS is here so that those
+ * themes that do want to use the dock will have a starting point at least
+ */
+
+/* Put a margin on the body if the dock is shown */

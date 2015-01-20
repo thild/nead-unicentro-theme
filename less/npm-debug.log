@@ -1,0 +1,144 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'recess', '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'recess', null ]
+6 verbose cache add name=undefined spec="recess" args=["recess",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'recess',
+7 verbose parsed url   path: 'recess',
+7 verbose parsed url   href: 'recess' }
+8 silly lockFile d0d1f171-recess recess
+9 verbose lock recess /home/bitnami/.npm/d0d1f171-recess.lock
+10 silly lockFile d0d1f171-recess recess
+11 silly lockFile d0d1f171-recess recess
+12 verbose addNamed [ 'recess', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile e131134d-recess recess@
+15 verbose lock recess@ /home/bitnami/.npm/e131134d-recess.lock
+16 silly addNameRange { name: 'recess', range: '*', hasData: false }
+17 verbose request where is /recess
+18 verbose request registry http://registry.npmjs.org/
+19 verbose request id 068a8efefbd76303
+20 verbose url raw /recess
+21 verbose url resolving [ 'http://registry.npmjs.org/', './recess' ]
+22 verbose url resolved http://registry.npmjs.org/recess
+23 verbose request where is http://registry.npmjs.org/recess
+24 info trying registry request attempt 1 at 15:17:14
+25 verbose etag "6NE5JXN0TN1J3C1GDPL8L8QVC"
+26 http GET http://registry.npmjs.org/recess
+27 http 304 http://registry.npmjs.org/recess
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Fri, 28 Nov 2014 00:58:12 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'last-modified': 'Fri, 28 Nov 2014 00:58:12 GMT',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     etag: '"6NE5JXN0TN1J3C1GDPL8L8QVC"',
+28 silly registry.get     age: '0',
+28 silly registry.get     connection: 'keep-alive',
+28 silly registry.get     'x-served-by': 'cache-jfk1030-JFK',
+28 silly registry.get     'x-cache': 'HIT',
+28 silly registry.get     'x-cache-hits': '1',
+28 silly registry.get     'x-timer': 'S1417136292.399456,VS0,VE75',
+28 silly registry.get     vary: 'Accept' } ]
+29 verbose etag http://registry.npmjs.org/recess from cache
+30 silly addNameRange number 2 { name: 'recess', range: '*', hasData: true }
+31 silly addNameRange versions [ 'recess',
+31 silly addNameRange   [ '0.1.0',
+31 silly addNameRange     '1.0.0',
+31 silly addNameRange     '1.0.1',
+31 silly addNameRange     '1.0.2',
+31 silly addNameRange     '1.0.3',
+31 silly addNameRange     '1.0.4',
+31 silly addNameRange     '1.1.0',
+31 silly addNameRange     '1.1.1',
+31 silly addNameRange     '1.1.3',
+31 silly addNameRange     '1.1.4',
+31 silly addNameRange     '1.1.5',
+31 silly addNameRange     '1.1.6',
+31 silly addNameRange     '1.1.7',
+31 silly addNameRange     '1.1.8',
+31 silly addNameRange     '1.1.9' ] ]
+32 verbose addNamed [ 'recess', '1.1.9' ]
+33 verbose addNamed [ '1.1.9', '1.1.9' ]
+34 silly lockFile 21009289-recess-1-1-9 recess@1.1.9
+35 verbose lock recess@1.1.9 /home/bitnami/.npm/21009289-recess-1-1-9.lock
+36 silly lockFile 21009289-recess-1-1-9 recess@1.1.9
+37 silly lockFile 21009289-recess-1-1-9 recess@1.1.9
+38 silly lockFile e131134d-recess recess@
+39 silly lockFile e131134d-recess recess@
+40 silly resolved [ { name: 'recess',
+40 silly resolved     description: 'A simple, attractive code quality tool for CSS built on top of LESS',
+40 silly resolved     version: '1.1.9',
+40 silly resolved     author:
+40 silly resolved      { name: 'Jacob Thornton',
+40 silly resolved        email: 'jacob@twitter.com',
+40 silly resolved        url: 'https://github.com/fat' },
+40 silly resolved     repository: { type: 'git', url: 'git://github.com/twitter/recess.git' },
+40 silly resolved     keywords: [ 'css', 'lint' ],
+40 silly resolved     licenses: [ [Object] ],
+40 silly resolved     main: './lib',
+40 silly resolved     homepage: 'http://twitter.github.com/recess',
+40 silly resolved     engines: { node: '>= 0.4.0' },
+40 silly resolved     dependencies:
+40 silly resolved      { colors: '>= 0.3.0',
+40 silly resolved        nopt: '>= 1.0.10',
+40 silly resolved        underscore: '>= 1.2.1',
+40 silly resolved        watch: '>= 0.5.1',
+40 silly resolved        less: '~1.3.0' },
+40 silly resolved     directories: { bin: './bin' },
+40 silly resolved     scripts: { test: 'node test' },
+40 silly resolved     bin: { recess: './bin/recess' },
+40 silly resolved     preferGlobal: true,
+40 silly resolved     readme: 'RECESS [![Build Status](https://secure.travis-ci.org/twitter/recess.png)](http://travis-ci.org/twitter/recess)\n======\n\nDeveloped at Twitter to support our internal styleguide, RECESS is a simple, attractive code quality tool for CSS built on top of LESS.\n\nIncorporate it into your development process as a linter, or integrate it directly into your build system as a compiler, RECESS will keep your source looking clean and super manageable.\n\n\nGENERAL USE\n-----------\n\n```CLI\n$ recess [path] [options]\n```\n\nOPTIONS\n-------\n\n- --compile - compiles your code and outputs it to the terminal. Fixes white space and sort order. Can compile css or less.\n- --compress - compress your compiled code.\n- --config - accepts a path, which specifies a json config object\n- --format <format> - control the output format of errors:\n  - --format text - the default format, shows errors and context\n  - --format compact - show errors one-error-per-line, useful for IDE integration\n- --noSummary - don\'t output the summary block for each file\n- --includePath - accepts an additional directory path to look for `@import`:ed LESS files in.\n- --stripColors - removes color from output (useful when logging)\n- --watch - watch filesystem for changes, useful when compiling Less projects\n- --noIDs - doesn\'t complain about using IDs in your stylesheets\n- --noJSPrefix - doesn\'t complain about styling `.js-` prefixed classnames\n- --noOverqualifying - doesn\'t complain about overqualified selectors (ie: `div#foo.bar`)\n- --noUnderscores - doesn\'t complain about using underscores in your class names\n- --noUniversalSelectors - doesn\'t complain about using the universal `*` selector\n- --prefixWhitespace - adds whitespace prefix to line up vender prefixed properties\n- --strictPropertyOrder - doesn\'t looking into your property ordering\n- --zeroUnits - doesn\'t complain if you add units to values of 0\n\n\nEXAMPLES\n--------\n\nLint all css files\n\n```CLI\n$ recess *.css\n```\n\nLint file, ignore styling of IDs\n\n```CLI\n$ recess ./bootstrap.css --noIds false\n```\n\nLint file with compact output and no color\n\n```CLI\n$ recess ./bootstrap.css --format compact --stripColors\n```\n\nCompile and compress .less file, then output it to a new file\n\n```CLI\n$ recess ./bootstrap.less --compress > ./bootstrap-production.css\n```\n\nWatch a directory for changes and auto compile a css file from the changes. *experimental*\n\n```CLI\n$ recess input.less:ouput.css --watch watch/this/dir/for/changes\n```\n\nWatch a single file for changes and auto compile a css file from the changes. *experimental*\n\n```CLI\n$ recess input.less:ouput.css --watch\n```\n\nPROGRAMMATIC API\n----------------\n\nRecess provides a pretty simple programmatic api.\n\n```JS\nvar recess = require(\'recess\')\n```\n\nOnce you\'ve required recess, just pass it a `path` (or array of paths) and an optional `options` object and an optional `callback`:\n\n```js\nrecess([\'../fat.css\', \'../twitter.css\'], { compile: true }, callback)\n```\n\nThe following options (and defaults) are available in the programatic api:\n\n- compile: false\n- compress: false\n- includePath: []\n- noIDs: true\n- noJSPrefix: true\n- noOverqualifying: true\n- noUnderscores: true\n- noUniversalSelectors: true\n- prefixWhitespace: true\n- strictPropertyOrder: true\n- stripColors: false\n- zeroUnits: true\n\nThe callback is fired when each instance has finished processessing an input. The callback is passed an array of of instances (one for each path). The instances have a bunch of useful things on them like the raw data and an array of output strings.\n\nWhen compiling, access the compiled source through the output property:\n\n```js\nvar recess = require(\'recess\')\n\nrecess(\'./js/fat.css\', { compile: true }, function (err, obj) {\n  if (err) throw err\n  console.log(\n  \tobj // recess instance for fat.css\n  , obj.output // array of loggable content\n  , obj.errors // array of failed lint rules\n  )\n})\n```\n\nINSTALLATION\n------------\n\nTo install recess you need both node and npm installed.\n\n```CLI\n$ npm install recess -g\n```\n\nAUTHORS\n------------\n\n+ **Jacob Thornton**: https://twitter.com/fat\n\nLICENSE\n------------\n\nCopyright 2012 Twitter, Inc.\n\nLicensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0',
+40 silly resolved     readmeFilename: 'README.md',
+40 silly resolved     bugs: { url: 'https://github.com/twitter/recess/issues' },
+40 silly resolved     _id: 'recess@1.1.9',
+40 silly resolved     _from: 'recess@' } ]
+41 info install recess@1.1.9 into /usr/lib
+42 info installOne recess@1.1.9
+43 verbose lib/node_modules/recess unbuild
+44 verbose tar unpack /home/bitnami/.npm/recess/1.1.9/package.tgz
+45 silly lockFile 9852d7e0-tar-usr-lib-node-modules-recess tar:///usr/lib/node_modules/recess
+46 verbose lock tar:///usr/lib/node_modules/recess /home/bitnami/.npm/9852d7e0-tar-usr-lib-node-modules-recess.lock
+47 silly lockFile c2acf58c-ami-npm-recess-1-1-9-package-tgz tar:///home/bitnami/.npm/recess/1.1.9/package.tgz
+48 verbose lock tar:///home/bitnami/.npm/recess/1.1.9/package.tgz /home/bitnami/.npm/c2acf58c-ami-npm-recess-1-1-9-package-tgz.lock
+49 silly gunzTarPerm modes [ '775', '664' ]
+50 error Error: EACCES, mkdir '/usr/lib/node_modules/recess'
+50 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/recess']
+50 error   errno: 3,
+50 error   code: 'EACCES',
+50 error   path: '/usr/lib/node_modules/recess',
+50 error   fstream_type: 'Directory',
+50 error   fstream_path: '/usr/lib/node_modules/recess',
+50 error   fstream_class: 'DirWriter',
+50 error   fstream_stack:
+50 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+50 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+50 error      'Object.oncomplete (fs.js:107:15)' ] }
+51 error Please try running this command again as root/Administrator.
+52 error System Linux 3.2.0-60-virtual
+53 error command "/usr/bin/node" "/usr/bin/npm" "install" "recess" "-g"
+54 error cwd /opt/bitnami/apps/moodle/htdocs/theme/unicentro/less
+55 error node -v v0.10.33
+56 error npm -v 1.4.28
+57 error path /usr/lib/node_modules/recess
+58 error fstream_path /usr/lib/node_modules/recess
+59 error fstream_type Directory
+60 error fstream_class DirWriter
+61 error code EACCES
+62 error errno 3
+63 error stack Error: EACCES, mkdir '/usr/lib/node_modules/recess'
+64 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+64 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+64 error fstream_stack Object.oncomplete (fs.js:107:15)
+65 verbose exit [ 3, true ]
