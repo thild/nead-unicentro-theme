@@ -9,15 +9,15 @@
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for unicentro details.
+// GNU General Public License for nead_unicentro details.
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Unicentro lang file.
+ * Theme Nead/Unicentro lang file.
  *
- * @package    theme_unicentro
+ * @package    theme_nead_unicentro
  * @copyright  2014 Frédéric Massart, Tony Alexander Hild
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -45,10 +45,10 @@ $string['backgroundrepeatrepeatx'] = 'Repetir horizontalmente';
 $string['backgroundrepeatrepeaty'] = 'Repetir verticalmente';
 $string['bodybackground'] = 'Cor de fundo';
 $string['bodybackground_desc'] = 'A cor principal usada como fundo.';
-$string['choosereadme'] = '<p>Unicentro é um tema que permite que você facilmente personalize as configurações visuais do Moodle a partir da interface web.</p>
+$string['choosereadme'] = '<p>Nead/Unicentro é um tema que permite que você facilmente personalize as configurações visuais do Moodle a partir da interface web.</p>
 <p>Visite as configurações de administração para alterar cores, adicionar uma imagem como fundo, adicionar seu logotipo e mais.</p>';
 
-$string['configtitle'] = 'Unicentro';
+$string['configtitle'] = 'Nead/Unicentro';
 $string['contentbackground'] = 'Cor de fundo do conteúdo principal';
 $string['contentbackground_desc'] = 'Cor de fundo do conteúdo principal do sítio. Deixe vazio para nenhuma.';
 
@@ -68,10 +68,10 @@ $string['linkcolor'] = 'Link colour';
 $string['linkcolor_desc'] = 'The colour of the links.';
 $string['logo'] = 'Logo';
 $string['logodesc'] = 'Please upload your custom logo here if you want to add it to the header.<br>
-If the height of your logo is unicentro than 75px add the following CSS rule to the Custom CSS box below.<br>
+If the height of your logo is nead_unicentro than 75px add the following CSS rule to the Custom CSS box below.<br>
 a.logo {height: 100px;} or whatever height in pixels the logo is.';
 
-$string['pluginname'] = 'Unicentro';
+$string['pluginname'] = 'Nead/Unicentro';
 
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';

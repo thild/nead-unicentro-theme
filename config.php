@@ -9,20 +9,20 @@
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for unicentro details.
+// GNU General Public License for nead_nead_nead_unicentro details.
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Unicentro config file.
+ * Theme Nead/Unicentro config file.
  *
- * @package    theme_unicentro
+ * @package    theme_nead_nead_nead_unicentro
  * @copyright  2014 Frédéric Massart, Tony Alexander Hild
   * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$THEME->name = 'unicentro';
+$THEME->name = 'nead_nead_nead_unicentro';
 $THEME->parents = array('clean', 'bootstrapbase');
 
 $THEME->doctype = 'html5';
@@ -30,15 +30,15 @@ $THEME->parents_exclude_sheets = array('bootstrapbase' => array('moodle'), 'clea
 $THEME->parents_exclude_javascripts = array('bootstrapbase' => array('dock'));
 $THEME->lessfile = 'moodle';
 $THEME->sheets = array('custom', 'dockmod', 'moodle', 'colorbox', 'external');
-$THEME->lessvariablescallback = 'theme_unicentro_less_variables';
-$THEME->extralesscallback = 'theme_unicentro_extra_less';
+$THEME->lessvariablescallback = 'theme_nead_nead_nead_unicentro_less_variables';
+$THEME->extralesscallback = 'theme_nead_nead_nead_unicentro_extra_less';
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
 $THEME->enable_dock = false;
 $THEME->editor_sheets = array();
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
-$THEME->csspostprocess = 'theme_unicentro_process_css';
+$THEME->csspostprocess = 'theme_nead_nead_nead_unicentro_process_css';
 
 $THEME->blockrtlmanipulations = array(
     'side-pre' => 'side-post',

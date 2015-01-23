@@ -128,7 +128,7 @@
 51 error Please try running this command again as root/Administrator.
 52 error System Linux 3.2.0-60-virtual
 53 error command "/usr/bin/node" "/usr/bin/npm" "install" "recess" "-g"
-54 error cwd /opt/bitnami/apps/moodle/htdocs/theme/unicentro/less
+54 error cwd /opt/bitnami/apps/moodle/htdocs/theme/nead_unicentro/less
 55 error node -v v0.10.33
 56 error npm -v 1.4.28
 57 error path /usr/lib/node_modules/recess

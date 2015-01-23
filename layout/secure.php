@@ -17,13 +17,13 @@
 /**
  * The secure layout.
  *
- * @package   theme_unicentro
+ * @package   theme_nead_unicentro
  * @copyright 2013 Moodle, moodle.org
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 // Get the HTML for the settings bits.
-$html = theme_unicentro_get_html_for_settings($OUTPUT, $PAGE);
+$html = theme_nead_unicentro_get_html_for_settings($OUTPUT, $PAGE);
 
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>

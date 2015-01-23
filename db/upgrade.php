@@ -9,15 +9,15 @@
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for unicentro details.
+// GNU General Public License for nead_unicentro details.
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Unicentro upgrade.
+ * Theme Nead/Unicentro upgrade.
  *
- * @package    theme_unicentro
+ * @package    theme_nead_unicentro
  * @copyright  2014 Frédéric Massart, Tony Alexander Hild
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,49 +25,49 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Theme_unicentro upgrade function.
+ * Theme_nead_unicentro upgrade function.
  *
  * @param  int $oldversion The version we upgrade from.
  * @return bool
  */
-function xmldb_theme_unicentro_upgrade($oldversion) {
+function xmldb_theme_nead_unicentro_upgrade($oldversion) {
     global $CFG;
 
     if ($oldversion < 2014032400) {
 
         // Set the default background. If an image is already there then ignore.
         $fs = get_file_storage();
-        $bg = $fs->get_area_files(context_system::instance()->id, 'theme_unicentro', 'backgroundimage', 0);
+        $bg = $fs->get_area_files(context_system::instance()->id, 'theme_nead_unicentro', 'backgroundimage', 0);
 
         // Add default background image.
         if (empty($bg)) {
             $filerecord = new stdClass();
-            $filerecord->component = 'theme_unicentro';
+            $filerecord->component = 'theme_nead_unicentro';
             $filerecord->contextid = context_system::instance()->id;
             $filerecord->userid    = get_admin()->id;
             $filerecord->filearea  = 'backgroundimage';
             $filerecord->filepath  = '/';
             $filerecord->itemid    = 0;
             $filerecord->filename  = 'background.png';
-            $fs->create_file_from_pathname($filerecord, $CFG->dirroot . '/theme/unicentro/pix/background.png');
+            $fs->create_file_from_pathname($filerecord, $CFG->dirroot . '/theme/nead_unicentro/pix/background.png');
         }
 
-        upgrade_plugin_savepoint(true, 2014032400, 'theme', 'unicentro');
+        upgrade_plugin_savepoint(true, 2014032400, 'theme', 'nead_unicentro');
 
     }
 
     if ($oldversion < 2014032401) {
 
         // Set the default settings as they might already be set.
-        set_config('textcolor', '#333366', 'theme_unicentro');
-        set_config('linkcolor', '#FF6500', 'theme_unicentro');
-        set_config('backgroundrepeat', 'repeat', 'theme_unicentro');
-        set_config('contentbackground', '#FFFFFF', 'theme_unicentro');
-        set_config('secondarybackground', '#FFFFFF', 'theme_unicentro');
-        set_config('invert', 1, 'theme_unicentro');
-        set_config('backgroundimage', '/background.png', 'theme_unicentro');
+        set_config('textcolor', '#333366', 'theme_nead_unicentro');
+        set_config('linkcolor', '#FF6500', 'theme_nead_unicentro');
+        set_config('backgroundrepeat', 'repeat', 'theme_nead_unicentro');
+        set_config('contentbackground', '#FFFFFF', 'theme_nead_unicentro');
+        set_config('secondarybackground', '#FFFFFF', 'theme_nead_unicentro');
+        set_config('invert', 1, 'theme_nead_unicentro');
+        set_config('backgroundimage', '/background.png', 'theme_nead_unicentro');
 
-        upgrade_plugin_savepoint(true, 2014032401, 'theme', 'unicentro');
+        upgrade_plugin_savepoint(true, 2014032401, 'theme', 'nead_unicentro');
     }
 
     // Moodle v2.7.0 release upgrade line.

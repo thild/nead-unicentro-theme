@@ -45,13 +45,13 @@ function customise_dock_for_theme(dock) {
 
     // We attach an event listener to the dock:initialised event so that when the
     // dock is finished initialising our initialise_mod function is called.
-    dock.on('dock:initialised', M.theme_unicentro.initialise_mod);
+    dock.on('dock:initialised', M.theme_nead_unicentro.initialise_mod);
     // Then we attach an event listener to the resizepanelcomplete event. The dock
     // fires this event when the panel is resized. This can happen because the
     // content has changed or the user has resized the browser.
     // When this fires we want to call our handle_resize function to fix any
     // display errors.
-    //dock.on('dock:resizepanelcomplete', M.theme_unicentro.handle_resize);
+    //dock.on('dock:resizepanelcomplete', M.theme_nead_unicentro.handle_resize);
 }
 
 /**
@@ -60,7 +60,7 @@ function customise_dock_for_theme(dock) {
  * We do this because we can easily access them later as we know exactly where
  * they are.
  */
-M.theme_unicentro = {
+M.theme_nead_unicentro = {
     /** This is the current position of the block */
     place : 0,
     /** These are the positions the block can have */
@@ -77,18 +77,18 @@ M.theme_unicentro = {
  * The primary use of this function is to create a button at the end of the dock
  * that the user can click to move the dock from one position to another.
  * Once we have created this button we attach a click event so that when the user
- * clicks the button the M.theme_unicentro.move_dock function is called.
+ * clicks the button the M.theme_nead_unicentro.move_dock function is called.
  */
-M.theme_unicentro.initialise_mod = function() {
+M.theme_nead_unicentro.initialise_mod = function() {
     var dock = DOCK;
     //var create  = Y.Node.create;
     // Create the button
     //var movebtn = create('<img alt="'+M.str.block.undockall+'" title="Move dock" class="movedockbutton" />');
-    //movebtn.setAttribute('src', M.util.image_url('move_dock', 'theme_unicentro'));
+    //movebtn.setAttribute('src', M.util.image_url('move_dock', 'theme_nead_unicentro'));
     // Add the button to the dock
     //Y.one('.'+CSS.controls).insert(movebtn, 0);
     // Attach the click event to call move_dock
-    //movebtn.on('click', M.theme_unicentro.move_dock);
+    //movebtn.on('click', M.theme_nead_unicentro.move_dock);
     
     dock.get('dockNode').appendTo('.navbar-inner');
     
@@ -104,7 +104,7 @@ M.theme_unicentro.initialise_mod = function() {
  * is horizontal rather than vertical as the current dock doesn't handle
  * horizontal display by itself.
  */
-M.theme_unicentro.handle_resize = function() {
+M.theme_nead_unicentro.handle_resize = function() {
     var dock = M.core.dock;
     // We only need to do stuff if its horizontal
     if (dock.orientation == 'horizontal' && dock.position == 'top') {
@@ -142,14 +142,14 @@ M.theme_unicentro.handle_resize = function() {
  * Essentially all this function does is move the dock from one position to the
  * next, and then corrects the orientation of the titles in the navigation.
  */
-M.theme_unicentro.move_dock = function (ev) {
+M.theme_nead_unicentro.move_dock = function (ev) {
     var dock = DOCK;
     // Work out the current class on the body tag for the position of the dock.
     var oldclassname = CSS.body+'_'+dock.get('position')+'_'+dock.get('orientation');
     // Work out the next place of the dock
-    M.theme_unicentro.place = (M.theme_unicentro.place + 1) % 3;
+    M.theme_nead_unicentro.place = (M.theme_unicentro.place + 1) % 3;
     // Get the paramenters for the next place
-    var move = M.theme_unicentro.moves[M.theme_unicentro.place];
+    var move = M.theme_nead_unicentro.moves[M.theme_unicentro.place];
     // Set change the dock parameters to the new parameters
     dock.set('position', move[0]);
     dock.set('orientation', move[1]);

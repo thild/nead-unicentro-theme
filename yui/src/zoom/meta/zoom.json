@@ -1,5 +1,5 @@
 {
-  "moodle-theme_unicentro-zoom": {
+  "moodle-theme_nead_unicentro-zoom": {
     "requires": [
         "node"
     ]

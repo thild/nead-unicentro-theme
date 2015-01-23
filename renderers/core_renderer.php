@@ -17,16 +17,16 @@
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package    theme_unicentro
+ * @package    theme_nead_unicentro
  * @copyright  2012 Bas Brands, www.basbrands.nl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class theme_unicentro_core_renderer extends theme_bootstrapbase_core_renderer {
+class theme_nead_unicentro_core_renderer extends theme_bootstrapbase_core_renderer {
 
     public function content_zoom() {
-        $zoomin = html_writer::span(get_string('fullscreen', 'theme_unicentro'), 'zoomin');
-        $zoomout = html_writer::span(get_string('closefullscreen', 'theme_unicentro'), 'zoomout');
+        $zoomin = html_writer::span(get_string('fullscreen', 'theme_nead_unicentro'), 'zoomin');
+        $zoomout = html_writer::span(get_string('closefullscreen', 'theme_nead_unicentro'), 'zoomout');
         $content = html_writer::link('#',  $zoomin . $zoomout,
             array('class' => 'btn btn-default pull-right moodlezoom'));
         return $content;

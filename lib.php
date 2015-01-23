@@ -9,15 +9,15 @@
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for unicentro details.
+// GNU General Public License for nead_unicentro details.
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Unicentro lib.
+ * Theme Nead/Unicentro lib.
  *
- * @package    theme_unicentro
+ * @package    theme_nead_unicentro
  * @copyright  2014 Frédéric Massart, Tony Alexander Hild
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -26,13 +26,13 @@
  * Extra LESS code to inject.
  *
  * This will generate some LESS code from the settings used by the user. We cannot use
- * the {@link theme_unicentro_less_variables()} here because we need to create selectors or
+ * the {@link theme_nead_unicentro_less_variables()} here because we need to create selectors or
  * alter existing ones.
  *
  * @param theme_config $theme The theme config object.
  * @return string Raw LESS code.
  */
-function theme_unicentro_extra_less($theme) {
+function theme_nead_unicentro_extra_less($theme) {
     $content = '';
     $imageurl = $theme->setting_file_url('backgroundimage', 'backgroundimage');
     // Sets the background image, and its settings.
@@ -72,7 +72,7 @@ function theme_unicentro_extra_less($theme) {
  * @param theme_config $theme The theme config object.
  * @return array of LESS variables without the @.
  */
-function theme_unicentro_less_variables($theme) {
+function theme_nead_unicentro_less_variables($theme) {
     $variables = array();
     if (!empty($theme->settings->bodybackground)) {
         $variables['bodyBackground'] = $theme->settings->bodybackground;
@@ -98,11 +98,11 @@ function theme_unicentro_less_variables($theme) {
  * @param theme_config $theme The theme config object.
  * @return string The parsed CSS The parsed CSS.
  */
-function theme_unicentro_process_css($css, $theme) {
+function theme_nead_unicentro_process_css($css, $theme) {
 
     // Set the background image for the logo.
     $logo = $theme->setting_file_url('logo', 'logo');
-    $css = theme_unicentro_set_logo($css, $logo);
+    $css = theme_nead_unicentro_set_logo($css, $logo);
 
     // Set custom CSS.
     if (!empty($theme->settings->customcss)) {
@@ -110,7 +110,7 @@ function theme_unicentro_process_css($css, $theme) {
     } else {
         $customcss = null;
     }
-    $css = theme_unicentro_set_customcss($css, $customcss);
+    $css = theme_nead_unicentro_set_customcss($css, $customcss);
 
     return $css;
 }
@@ -122,7 +122,7 @@ function theme_unicentro_process_css($css, $theme) {
  * @param string $logo The URL of the logo.
  * @return string The parsed CSS
  */
-function theme_unicentro_set_logo($css, $logo) {
+function theme_nead_unicentro_set_logo($css, $logo) {
     $tag = '[[setting:logo]]';
     $replacement = $logo;
     if (is_null($replacement)) {
@@ -146,9 +146,9 @@ function theme_unicentro_set_logo($css, $logo) {
  * @param array $options
  * @return bool
  */
-function theme_unicentro_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+function theme_nead_unicentro_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
     if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage')) {
-        $theme = theme_config::load('unicentro');
+        $theme = theme_config::load('nead_unicentro');
         return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
     } else {
         send_file_not_found();
@@ -162,7 +162,7 @@ function theme_unicentro_pluginfile($course, $cm, $context, $filearea, $args, $f
  * @param string $customcss The custom CSS to add.
  * @return string The CSS which now contains our custom CSS.
  */
-function theme_unicentro_set_customcss($css, $customcss) {
+function theme_nead_unicentro_set_customcss($css, $customcss) {
     $tag = '[[setting:customcss]]';
     $replacement = $customcss;
     if (is_null($replacement)) {
@@ -177,7 +177,7 @@ function theme_unicentro_set_customcss($css, $customcss) {
 /**
  * Returns an object containing HTML for the areas affected by settings.
  *
- * Do not add Unicentro specific logic in here, child themes should be able to
+ * Do not add Nead/Unicentro specific logic in here, child themes should be able to
  * rely on that function just by declaring settings with similar names.
  *
  * @param renderer_base $output Pass in $OUTPUT.
@@ -187,7 +187,7 @@ function theme_unicentro_set_customcss($css, $customcss) {
  *      - heading HTML to use for the heading. A logo if one is selected or the default heading.
  *      - footnote HTML to use as a footnote. By default ''.
  */
-function theme_unicentro_get_html_for_settings(renderer_base $output, moodle_page $page) {
+function theme_nead_unicentro_get_html_for_settings(renderer_base $output, moodle_page $page) {
     global $CFG;
     $return = new stdClass;
 
@@ -201,7 +201,7 @@ function theme_unicentro_get_html_for_settings(renderer_base $output, moodle_pag
         $courseid = $page->course->id;
         $context = context_course::instance($courseid);
         //print_object($page->course);
-        $theme = theme_config::load('unicentro');
+        $theme = theme_config::load('nead_unicentro');
         $logo = $theme->setting_file_url('logo', 'logo');
         //$img = html_writer::empty_tag('img', array('src' => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAUCAYAAAByKzjvAAAAHklEQVRYhe3BAQ0AAADCoPdPbQ8HFAAAAAAAAACvBh4UAAGaUi4OAAAAAElFTkSuQmCC', 'class' => 'logo-placeholder', 'width' => '100%', 'height' => '20'));
         //$img = html_writer::empty_tag('img', array('src' => $logo, 'class' => 'logo-placeholder hidden'));
@@ -238,12 +238,12 @@ function theme_unicentro_get_html_for_settings(renderer_base $output, moodle_pag
     return $return;
 }
 
-function theme_unicentro_page_init(moodle_page $page) {
+function theme_nead_unicentro_page_init(moodle_page $page) {
     $page->requires->jquery();
-    $page->requires->jquery_plugin('bootstrap', 'theme_unicentro');
-    $page->requires->jquery_plugin('jquery.cookie', 'theme_unicentro');
-    $page->requires->jquery_plugin('jquery.colorbox', 'theme_unicentro');
-    $page->requires->jquery_plugin('jquery.colorbox-pt-br', 'theme_unicentro');
+    $page->requires->jquery_plugin('bootstrap', 'theme_nead_unicentro');
+    $page->requires->jquery_plugin('jquery.cookie', 'theme_nead_unicentro');
+    $page->requires->jquery_plugin('jquery.colorbox', 'theme_nead_unicentro');
+    $page->requires->jquery_plugin('jquery.colorbox-pt-br', 'theme_nead_unicentro');
 }
 
 /**
@@ -251,14 +251,14 @@ function theme_unicentro_page_init(moodle_page $page) {
  *
  * @param moodle_page $page Pass in $PAGE.
  */
-function theme_unicentro_initialise_zoom(moodle_page $page) {
-    user_preference_allow_ajax_update('theme_unicentro_zoom', PARAM_TEXT);
-    $page->requires->yui_module('moodle-theme_unicentro-zoom', 'M.theme_unicentro.zoom.init', array());
+function theme_nead_unicentro_initialise_zoom(moodle_page $page) {
+    user_preference_allow_ajax_update('theme_nead_unicentro_zoom', PARAM_TEXT);
+    $page->requires->yui_module('moodle-theme_nead_unicentro-zoom', 'M.theme_unicentro.zoom.init', array());
 }
 
 /**
  * Get the user preference for the zoom function.
  */
-function theme_unicentro_get_zoom() {
-    return get_user_preferences('theme_unicentro_zoom', '');
+function theme_nead_unicentro_get_zoom() {
+    return get_user_preferences('theme_nead_unicentro_zoom', '');
 }
