@@ -28,6 +28,6 @@ $plugin->version   = 2014110400;
 $plugin->requires  = 2014110400;
 $plugin->component = 'theme_nead_unicentro';
 $plugin->dependencies = array(
-    'theme_nead_unicentrobase'  => 2014110400,
+    'theme_bootstrapbase'  => 2014110400,
     'theme_clean'  => 2014110400,
 );

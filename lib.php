@@ -253,7 +253,7 @@ function theme_nead_unicentro_page_init(moodle_page $page) {
  */
 function theme_nead_unicentro_initialise_zoom(moodle_page $page) {
     user_preference_allow_ajax_update('theme_nead_unicentro_zoom', PARAM_TEXT);
-    $page->requires->yui_module('moodle-theme_nead_unicentro-zoom', 'M.theme_unicentro.zoom.init', array());
+    $page->requires->yui_module('moodle-theme_nead_unicentro-zoom', 'M.theme_nead_unicentro.zoom.init', array());
 }
 
 /**
