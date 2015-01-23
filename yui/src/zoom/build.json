@@ -1,0 +1,10 @@
+{
+  "name": "moodle-theme_unicentro-zoom",
+  "builds": {
+    "moodle-theme_unicentro-zoom": {
+      "jsfiles": [
+        "zoom.js"
+      ]
+    }
+  }
+}

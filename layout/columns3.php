@@ -31,6 +31,14 @@
 // Get the HTML for the settings bits.
 $html = theme_unicentro_get_html_for_settings($OUTPUT, $PAGE);
 
+$knownregionpre = $PAGE->blocks->is_known_region('side-pre');
+$knownregionpost = $PAGE->blocks->is_known_region('side-post');
+
+if ($knownregionpre || $knownregionpost) {
+    theme_unicentro_initialise_zoom($PAGE);
+}
+$setzoom = theme_unicentro_get_zoom();
+
 if (right_to_left()) {
     $regionbsid = 'region-bs-main-and-post';
 } else {
@@ -46,7 +54,7 @@ echo $OUTPUT->doctype() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body <?php echo $OUTPUT->body_attributes(); ?>>
+<body <?php echo $OUTPUT->body_attributes($setzoom);?>>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
@@ -72,6 +80,10 @@ echo $OUTPUT->doctype() ?>
 	<div id="page-navbar" class="container-fluid">
 	    <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
 	    <div class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></div>
+            <?php if ($knownregionpre || $knownregionpost) { ?>
+                <div class="breadcrumb-button"> <?php echo $OUTPUT->content_zoom(); ?></div>
+            <?php } ?>
+	    
 	</div>
     </nav>
 </header>

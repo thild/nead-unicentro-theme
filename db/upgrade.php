@@ -48,8 +48,8 @@ function xmldb_theme_unicentro_upgrade($oldversion) {
             $filerecord->filearea  = 'backgroundimage';
             $filerecord->filepath  = '/';
             $filerecord->itemid    = 0;
-            $filerecord->filename  = 'background.jpg';
-            $fs->create_file_from_pathname($filerecord, $CFG->dirroot . '/theme/unicentro/pix/background.jpg');
+            $filerecord->filename  = 'background.png';
+            $fs->create_file_from_pathname($filerecord, $CFG->dirroot . '/theme/unicentro/pix/background.png');
         }
 
         upgrade_plugin_savepoint(true, 2014032400, 'theme', 'unicentro');
@@ -65,7 +65,7 @@ function xmldb_theme_unicentro_upgrade($oldversion) {
         set_config('contentbackground', '#FFFFFF', 'theme_unicentro');
         set_config('secondarybackground', '#FFFFFF', 'theme_unicentro');
         set_config('invert', 1, 'theme_unicentro');
-        set_config('backgroundimage', '/background.jpg', 'theme_unicentro');
+        set_config('backgroundimage', '/background.png', 'theme_unicentro');
 
         upgrade_plugin_savepoint(true, 2014032401, 'theme', 'unicentro');
     }

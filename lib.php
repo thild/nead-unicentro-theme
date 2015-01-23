@@ -196,15 +196,36 @@ function theme_unicentro_get_html_for_settings(renderer_base $output, moodle_pag
         $return->navbarclass .= ' navbar-inverse';
     }
 
+    $page_heading = $output->page_heading();
     if (!empty($page->theme->settings->logo)) {
         $courseid = $page->course->id;
         $context = context_course::instance($courseid);
         //print_object($page->course);
         $theme = theme_config::load('unicentro');
         $logo = $theme->setting_file_url('logo', 'logo');
-        $img = html_writer::empty_tag('img', array('src' => $logo, 'class' => 'logo-placeholder hidden'));
-        $text = $page->course->summary;
-        $return->heading = html_writer::link($CFG->wwwroot, $img.$text, array('title' => get_string('home'), 'class' => 'logo'));
+        //$img = html_writer::empty_tag('img', array('src' => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAUCAYAAAByKzjvAAAAHklEQVRYhe3BAQ0AAADCoPdPbQ8HFAAAAAAAAACvBh4UAAGaUi4OAAAAAElFTkSuQmCC', 'class' => 'logo-placeholder', 'width' => '100%', 'height' => '20'));
+        //$img = html_writer::empty_tag('img', array('src' => $logo, 'class' => 'logo-placeholder hidden'));
+        $img = html_writer::empty_tag('img', array('src' => $logo, 'class' => 'logo-placeholder'));
+        
+        $default_heading = html_writer::tag('div', $page_heading, array('class' => 'default-heading'));
+        
+        $text = '';
+        
+        if(method_exists(course_get_format($page->course), 'get_settings')) {
+	  $text = course_get_format($page->course)->get_settings()['headinginfo'];
+	}
+	
+	$header_info = '';
+	
+	if (is_null($text)) {
+	  $text = '';
+	}
+	else {
+	  $heading_info = html_writer::tag('div', $text, array('class' => 'heading-info')); 
+	}
+	
+        $logo_heading = html_writer::tag('div', $img.$heading_info, array('class' => 'logo'));
+        $return->heading = $logo_heading.$default_heading;
     } else {
         $return->heading = $output->page_heading();
     }
@@ -220,4 +241,24 @@ function theme_unicentro_get_html_for_settings(renderer_base $output, moodle_pag
 function theme_unicentro_page_init(moodle_page $page) {
     $page->requires->jquery();
     $page->requires->jquery_plugin('bootstrap', 'theme_unicentro');
+    $page->requires->jquery_plugin('jquery.cookie', 'theme_unicentro');
+    $page->requires->jquery_plugin('jquery.colorbox', 'theme_unicentro');
+    $page->requires->jquery_plugin('jquery.colorbox-pt-br', 'theme_unicentro');
+}
+
+/**
+ * Loads the JavaScript for the zoom function.
+ *
+ * @param moodle_page $page Pass in $PAGE.
+ */
+function theme_unicentro_initialise_zoom(moodle_page $page) {
+    user_preference_allow_ajax_update('theme_unicentro_zoom', PARAM_TEXT);
+    $page->requires->yui_module('moodle-theme_unicentro-zoom', 'M.theme_unicentro.zoom.init', array());
+}
+
+/**
+ * Get the user preference for the zoom function.
+ */
+function theme_unicentro_get_zoom() {
+    return get_user_preferences('theme_unicentro_zoom', '');
 }

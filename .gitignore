@@ -9,3 +9,5 @@
 #
 # See gitignore(5) man page for more details
 #
+pix/logos/
+fonts/custom/

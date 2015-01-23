@@ -166,4 +166,14 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
+    
+    // External CSS.
+    $name = 'theme_unicentro/externalcss';
+    $title = get_string('externalcss', 'theme_unicentro');
+    $description = get_string('externalcssdesc', 'theme_unicentro');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $settings->add($setting);
+    
 }

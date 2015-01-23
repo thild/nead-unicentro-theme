@@ -55,6 +55,9 @@ $string['contentbackground_desc'] = 'The background colour of the main content o
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = 'Whatever CSS rules you add to this textarea will be reflected in every page, making for easier customization of this theme.';
 
+$string['externalcss'] = 'CSS Externo';
+$string['externalcssdesc'] = 'CSS externo.';
+
 $string['footnote'] = 'Footnote';
 $string['footnotedesc'] = 'Whatever you add to this textarea will be displayed in the footer throughout your Moodle site.';
 
@@ -77,3 +80,5 @@ $string['secondarybackground_desc'] = 'The background colour of any secondary co
 $string['textcolor'] = 'Text colour';
 $string['textcolor_desc'] = 'The colour of the text.';
 
+$string['fullscreen'] = 'Full screen';
+$string['closefullscreen'] = 'Close full screen';

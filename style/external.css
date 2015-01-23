@@ -1,0 +1,20 @@
+.category-2 .logo {
+  background-image: url(http://10.1.1.110/theme/unicentro/pix/logos/logo-nead-cb.png);
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {font-family:"ASO";src:url("http://10.1.1.110/theme/unicentro/fonts/custom/ASO/ASO.eot?") format("eot"),url("http://10.1.1.110/theme/unicentro/fonts/custom/ASO/ASO.woff") format("woff"),url("http://10.1.1.110/theme/unicentro/fonts/custom/ASO/ASO.ttf") format("truetype"),url("http://10.1.1.110/theme/unicentro/fonts/custom/ASO/ASO.svg#ASO") format("svg");font-weight:normal;font-style:normal;}
+
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+font-family:"AdobeDevanagari";
+src: url("http://10.1.1.110/theme/unicentro/fonts/custom/AdobeDevanagari/AdobeDevanagari-Regular.otf") format("opentype");
+font-weight:normal;font-style:normal;
+}
+
+
+.category-2 #page-header .heading-info > p:first-child {
+    color: #99d420;
+    font-family: AdobeDevanagari, verdana,arial,helvetica,sans-serif;
+} 

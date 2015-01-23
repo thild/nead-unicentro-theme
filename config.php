@@ -26,15 +26,15 @@ $THEME->name = 'unicentro';
 $THEME->parents = array('clean', 'bootstrapbase');
 
 $THEME->doctype = 'html5';
-$THEME->sheets = array('custom', 'dockmod', 'moodle');
-$THEME->lessfile = 'moodle';
 $THEME->parents_exclude_sheets = array('bootstrapbase' => array('moodle'), 'clean' => array('custom'), 'base' => array('dock'));
 $THEME->parents_exclude_javascripts = array('bootstrapbase' => array('dock'));
+$THEME->lessfile = 'moodle';
+$THEME->sheets = array('custom', 'dockmod', 'moodle', 'colorbox', 'external');
 $THEME->lessvariablescallback = 'theme_unicentro_less_variables';
 $THEME->extralesscallback = 'theme_unicentro_extra_less';
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
-$THEME->enable_dock = true;
+$THEME->enable_dock = false;
 $THEME->editor_sheets = array();
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
@@ -45,4 +45,4 @@ $THEME->blockrtlmanipulations = array(
     'side-post' => 'side-pre'
 );
 
-$THEME->javascripts = array('dockmod');
+$THEME->javascripts = array('dockmod', 'tabs', 'colorbox', 'fix');

@@ -1,0 +1,7 @@
+{
+  "moodle-theme_unicentro-zoom": {
+    "requires": [
+        "node"
+    ]
+  }
+}

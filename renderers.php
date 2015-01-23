@@ -1,5 +1,5 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of The Bootstrap 3 Moodle theme
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -9,25 +9,18 @@
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for unicentro details.
+// GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Unicentro version file.
+ * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
  * @package    theme_unicentro
- * @copyright  2014 Frédéric Massart, Tony Alexander Hild
+ * @copyright  2014 Bas Brands, www.basbrands.nl
+ * @authors    Bas Brands, David Scotson, Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
-
-$plugin->version   = 2014110400;
-$plugin->requires  = 2014110400;
-$plugin->component = 'theme_unicentro';
-$plugin->dependencies = array(
-    'theme_unicentrobase'  => 2014110400,
-    'theme_clean'  => 2014110400,
-);
+require_once('renderers/core_renderer.php');
