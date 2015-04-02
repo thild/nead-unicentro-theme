@@ -1,5 +1,5 @@
 /* Custom CSS
--------------------------*/
+-------------------------
 a.logo {
     background: url([[setting:logo]]) no-repeat 0 0;
     display: block;
@@ -24,6 +24,7 @@ a.logo img.logo-placeholder {
     display: block;
     float: right;
 }
+*/
 
 /* Custom CSS Settings
 -------------------------*/

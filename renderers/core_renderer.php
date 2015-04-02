@@ -28,7 +28,7 @@ class theme_nead_unicentro_core_renderer extends theme_bootstrapbase_core_render
         $zoomin = html_writer::span(get_string('fullscreen', 'theme_nead_unicentro'), 'zoomin');
         $zoomout = html_writer::span(get_string('closefullscreen', 'theme_nead_unicentro'), 'zoomout');
         $content = html_writer::link('#',  $zoomin . $zoomout,
-            array('class' => 'btn btn-default pull-right moodlezoom'));
+            array('class' => 'btn btn-default pull-left moodlezoom'));
         return $content;
     }
 

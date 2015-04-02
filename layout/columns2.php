@@ -25,6 +25,14 @@
 // Get the HTML for the settings bits.
 $html = theme_nead_unicentro_get_html_for_settings($OUTPUT, $PAGE);
 
+$knownregionpre = $PAGE->blocks->is_known_region('side-pre');
+$knownregionpost = $PAGE->blocks->is_known_region('side-post');
+
+if ($knownregionpre || $knownregionpost) {
+    theme_nead_unicentro_initialise_zoom($PAGE);
+}
+$setzoom = theme_nead_unicentro_get_zoom();
+
 $left = (!right_to_left());  // To know if to add 'pull-right' and 'desktop-first-column' classes in the layout for LTR.
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
@@ -58,6 +66,15 @@ echo $OUTPUT->doctype() ?>
                 </ul>
             </div>
         </div>
+	<div id="page-navbar" class="container-fluid">
+	    <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
+	    <div class="breadcrumb-button">
+		<?php if ($knownregionpre || $knownregionpost) { ?>
+		    <?php echo $OUTPUT->content_zoom(); ?>
+		<?php } ?>
+		<?php echo $OUTPUT->page_heading_button(); ?>
+            </div>
+	</div>
     </nav>
 </header>
 
@@ -65,10 +82,6 @@ echo $OUTPUT->doctype() ?>
 
     <header id="page-header" class="clearfix">
         <?php echo $html->heading; ?>
-        <div id="page-navbar" class="clearfix">
-            <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
-            <div class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></div>
-        </div>
         <div id="course-header">
             <?php echo $OUTPUT->course_header(); ?>
         </div>

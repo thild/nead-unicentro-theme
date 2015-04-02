@@ -29,7 +29,7 @@ $THEME->doctype = 'html5';
 $THEME->parents_exclude_sheets = array('bootstrapbase' => array('moodle'), 'clean' => array('custom'), 'base' => array('dock'));
 $THEME->parents_exclude_javascripts = array('bootstrapbase' => array('dock'));
 $THEME->lessfile = 'moodle';
-$THEME->sheets = array('custom', 'dockmod', 'moodle', 'colorbox', 'external');
+$THEME->sheets = array('custom', 'dockmod', 'moodle', 'colorbox', 'external', 'font-awesome.min');
 $THEME->lessvariablescallback = 'theme_nead_unicentro_less_variables';
 $THEME->extralesscallback = 'theme_nead_unicentro_extra_less';
 $THEME->supportscssoptimisation = false;
@@ -45,4 +45,4 @@ $THEME->blockrtlmanipulations = array(
     'side-post' => 'side-pre'
 );
 
-$THEME->javascripts = array('dockmod', 'tabs', 'colorbox', 'fix');
+$THEME->javascripts = array('dockmod', 'colorbox');

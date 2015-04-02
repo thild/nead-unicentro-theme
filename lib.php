@@ -80,9 +80,11 @@ function theme_nead_unicentro_less_variables($theme) {
     if (!empty($theme->settings->textcolor)) {
         $variables['textColor'] = $theme->settings->textcolor;
     }
+    /*
     if (!empty($theme->settings->linkcolor)) {
         $variables['linkColor'] = $theme->settings->linkcolor;
     }
+    */
     if (!empty($theme->settings->secondarybackground)) {
         $variables['wellBackground'] = $theme->settings->secondarybackground;
     }
@@ -196,36 +198,11 @@ function theme_nead_unicentro_get_html_for_settings(renderer_base $output, moodl
         $return->navbarclass .= ' navbar-inverse';
     }
 
-    $page_heading = $output->page_heading();
-    if (!empty($page->theme->settings->logo)) {
-        $courseid = $page->course->id;
-        $context = context_course::instance($courseid);
-        //print_object($page->course);
-        $theme = theme_config::load('nead_unicentro');
-        $logo = $theme->setting_file_url('logo', 'logo');
-        //$img = html_writer::empty_tag('img', array('src' => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAUCAYAAAByKzjvAAAAHklEQVRYhe3BAQ0AAADCoPdPbQ8HFAAAAAAAAACvBh4UAAGaUi4OAAAAAElFTkSuQmCC', 'class' => 'logo-placeholder', 'width' => '100%', 'height' => '20'));
-        //$img = html_writer::empty_tag('img', array('src' => $logo, 'class' => 'logo-placeholder hidden'));
-        $img = html_writer::empty_tag('img', array('src' => $logo, 'class' => 'logo-placeholder'));
-        
-        $default_heading = html_writer::tag('div', $page_heading, array('class' => 'default-heading'));
-        
-        $text = '';
-        
-        if(method_exists(course_get_format($page->course), 'get_settings')) {
-	  $text = course_get_format($page->course)->get_settings()['headinginfo'];
-	}
-	
-	$header_info = '';
-	
-	if (is_null($text)) {
-	  $text = '';
-	}
-	else {
-	  $heading_info = html_writer::tag('div', $text, array('class' => 'heading-info')); 
-	}
-	
-        $logo_heading = html_writer::tag('div', $img.$heading_info, array('class' => 'logo'));
-        $return->heading = $logo_heading.$default_heading;
+    if($page->course->format == 'nead_unicentro') {
+      $return->heading = '';
+    }  
+    else if (!empty($page->theme->settings->logo)) {
+        $return->heading = html_writer::link($CFG->wwwroot, '', array('title' => get_string('home'), 'class' => 'logo'));
     } else {
         $return->heading = $output->page_heading();
     }
@@ -239,9 +216,14 @@ function theme_nead_unicentro_get_html_for_settings(renderer_base $output, moodl
 }
 
 function theme_nead_unicentro_page_init(moodle_page $page) {
+    $reset = isset($_GET['reset']) ? $_GET['reset'] : null;
+    if(!is_null($reset)) {
+      theme_reset_all_caches();
+      purge_all_caches();
+    }
+
     $page->requires->jquery();
     $page->requires->jquery_plugin('bootstrap', 'theme_nead_unicentro');
-    $page->requires->jquery_plugin('jquery.cookie', 'theme_nead_unicentro');
     $page->requires->jquery_plugin('jquery.colorbox', 'theme_nead_unicentro');
     $page->requires->jquery_plugin('jquery.colorbox-pt-br', 'theme_nead_unicentro');
 }

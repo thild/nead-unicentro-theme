@@ -12,6 +12,8 @@
 @import "moodle/question";
 @import "moodle/user";
 
+//Nead/Unicentro especific
+@import "moodle/nead_unicentro";
 
 // Upstream Bootstrap.
 @import "bootstrap/bootstrap";
@@ -43,7 +45,7 @@
 // Needs to be between bootstrap/bootstrap and
 // bootstrap/responsive.
 body {
-    padding-top: 80px;
+    padding-top: 90px;
 }
 
 // New Moodle stuff that builds on Bootstrap.
@@ -76,3 +78,11 @@ body {
 
 @import "moodle/debug";
 @import "moodle/expendable";
+
+/*
+ * @package     theme_essential
+ * @copyright   2014 Gareth J Barnard, David Bezemer
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+// Import Font-Awesome
+@import "fontawesome/font-awesome";

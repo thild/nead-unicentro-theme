@@ -14,7 +14,7 @@ $(document).ready(function(){
   $(".inline").colorbox({inline:true, width:"80%"});
   $('.non-retina').colorbox({rel:'group5', transition:'none'})
   $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
-  $(".youtube").prepend('<img class="iconlarge activityicon" alt="URL" src="http://www.infocos.org.br/moodle/theme/image.php?theme=prosol&component=url&image=icon" />');  
-  $(".inline").prepend('<img class="iconlarge activityicon" alt="URL" src="http://www.infocos.org.br/moodle/theme/image.php?theme=prosol&component=url&image=icon" />');  
-  $(".iframe").prepend('<img class="iconlarge activityicon" alt="URL" src="http://www.infocos.org.br/moodle/theme/image.php?theme=prosol&component=core&image=f%2Fsourcecode-24"></img>');
+  $(".youtube").prepend('<img class="iconlarge activityicon" alt="URL" src="/theme/image.php?theme=nead_unicentro&component=url&image=icon" />');  
+  $(".inline").prepend('<img class="iconlarge activityicon" alt="URL" src="/theme/image.php?theme=nead_unicentro&component=url&image=icon" />');  
+  $(".iframe").prepend('<img class="iconlarge activityicon" alt="URL" src="/theme/image.php?theme=nead_unicentro&component=core&image=f%2Fsourcecode-24"></img>');
 });  

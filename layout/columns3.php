@@ -79,11 +79,12 @@ echo $OUTPUT->doctype() ?>
         </div>
 	<div id="page-navbar" class="container-fluid">
 	    <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
-	    <div class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></div>
-            <?php if ($knownregionpre || $knownregionpost) { ?>
-                <div class="breadcrumb-button"> <?php echo $OUTPUT->content_zoom(); ?></div>
-            <?php } ?>
-	    
+	    <div class="breadcrumb-button">
+		<?php if ($knownregionpre || $knownregionpost) { ?>
+		    <?php echo $OUTPUT->content_zoom(); ?>
+		<?php } ?>
+		<?php echo $OUTPUT->page_heading_button(); ?>
+            </div>
 	</div>
     </nav>
 </header>

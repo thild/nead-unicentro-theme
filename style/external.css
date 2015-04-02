@@ -1,20 +1,619 @@
-.category-2 .logo {
-  background-image: url(http://10.1.1.110/theme/nead_unicentro/pix/logos/logo-nead-cb.png);
+.category-5 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-epcg]]);
 }
 
-/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
-@font-face {font-family:"ASO";src:url("http://10.1.1.110/theme/nead_unicentro/fonts/custom/ASO/ASO.eot?") format("eot"),url("http://10.1.1.110/theme/unicentro/fonts/custom/ASO/ASO.woff") format("woff"),url("http://10.1.1.110/theme/unicentro/fonts/custom/ASO/ASO.ttf") format("truetype"),url("http://10.1.1.110/theme/unicentro/fonts/custom/ASO/ASO.svg#ASO") format("svg");font-weight:normal;font-style:normal;}
 
+.category-5 #course-header .heading-info > p:first-child {
+    color: #99d420;
+    font-family: AdobeDevanagari, verdana,arial,helvetica,sans-serif;
+} 
+
+
+body.format-nead_unicentro #course-header div.heading-container[data-custom-heading-image |= false] img {
+  visibility: hidden;
+}
+
+.category-2 #course-header div.heading-container[data-custom-heading-image |= false] {
+  background-image: url([[pix:theme|logos/logo-nead]]);
+}
+
+a.moodlezoom:hover, a.moodlezoom:focus,
+a.moodlezoom {
+  color: #333 !important;
+}
+
+/*Graduação*/
+
+/*Ciências Biológicas - 15*/
 
 /* @font-face kit by Fonts2u (http://www.fonts2u.com) */
 @font-face {
 font-family:"AdobeDevanagari";
-src: url("http://10.1.1.110/theme/nead_unicentro/fonts/custom/AdobeDevanagari/AdobeDevanagari-Regular.otf") format("opentype");
+src: url("[[font:theme|AdobeDevanagari-Regular.otf]]") format("opentype");
+font-weight:normal;font-style:normal;
+}
+
+.category-15 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-cb]]);
+}
+
+
+.category-15 #course-header .heading-info > p:first-child {
+    color: #99d420;
+    font-family: AdobeDevanagari, verdana,arial,helvetica,sans-serif;
+} 
+
+/*Professores*/
+.category-15 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-15 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+/*Administração Pública - 16*/
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+font-family:Consolas;
+    src:url("[[font:theme|consolas-webfont.eot?]]") format("eot"),
+    url("[[font:theme|consolas-webfont.woff]]") format("woff"),
+    url("[[font:theme|consolas-webfont.ttf]]") format("truetype"),
+    url("[[font:theme|consolas-webfont.svg#CONSOLAS]]") format("svg");font-weight:normal;font-style:normal;}
+
+.category-16 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-ap]]);
+}
+
+
+/*Nome da disciplina*/
+.category-16 #course-header .heading-info > p:first-child {
+    color: #4D6AB1;
+    font-family: Consolas,verdana,arial,helvetica,sans-serif;
+} 
+
+/*Professores*/
+.category-16 #course-header .heading-info > p:first-child + p {
+    color: #000;
+    font-family: CorbelRegular,verdana,arial,helvetica,sans-serif;
+}
+
+/*Período*/
+.category-16 #course-header .heading-info > p:first-child + p + p {
+    color: #7454A1;
+    font-family: CorbelRegular,verdana,arial,helvetica,sans-serif;
+}
+    
+ 
+/*
+ * Pedagogia Complementar - 17
+ * Pedagogia - 20
+ */
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+    font-family: 'EraserDustRegular';
+    src: url('[[font:theme|erasdust-webfont.eot]]');
+    src: url('[[font:theme|erasdust-webfont.eot?#iefix]]') format('embedded-opentype'),
+         url('[[font:theme|erasdust-webfont.woff]]') format('woff'),
+         url('[[font:theme|erasdust-webfont.ttf]]') format('truetype'),
+         url('[[font:theme|erasdust-webfont.svg#EraserDustRegular]]') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.category-20 a:hover, .category-20 a:focus,
+.category-17 a:hover, .category-17 a:focus {
+    color: #136846;
+}
+
+.category-20 a,
+.category-17 a {
+    color: #199563;
+}
+
+.category-17 #course-header .heading-container, 
+.category-20 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-p]]);
+}
+
+/*Nome da disciplina*/
+.category-17 #course-header .heading-info > p:first-child,
+.category-20 #course-header .heading-info > p:first-child {
+    color: #fff;
+    font-family: EraserDustRegular,verdana,arial,helvetica,sans-serif;
+} 
+        
+/*Professores*/
+.category-17 #course-header .heading-info > p:first-child + p,
+.category-20 #course-header .heading-info > p:first-child + p {
+    color: #CDAD50;
+}
+
+/*Período*/
+.category-17 #course-header .heading-info > p:first-child + p + p,
+.category-20 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+        
+        
+/* Arte e Educação - 18*/
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+    font-family: 'BlackChanceryRegular';
+    src: url('[[font:theme|blkchcry-webfont.eot]]');
+    src: url('[[font:theme|blkchcry-webfont.eot?#iefix]]') format('embedded-opentype'),
+         url('[[font:theme|blkchcry-webfont.woff]]') format('woff'),
+         url('[[font:theme|blkchcry-webfont.ttf]]') format('truetype'),
+         url('[[font:theme|blkchcry-webfont.svg#BlackChanceryRegular]]') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CorbelRegular';
+    src: url('[[font:theme|corbel-webfont.eot]]');
+    src: url('[[font:theme|corbel-webfont.eot?#iefix]]') format('embedded-opentype'),
+         url('[[font:theme|corbel-webfont.woff]]') format('woff'),
+         url('[[font:theme|corbel-webfont.ttf]]') format('truetype'),
+         url('[[font:theme|corbel-webfont.svg#CorbelRegular]]') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.category-18 a:hover, .category-18 a:focus {
+    color: #BB9BE4;
+}
+
+.category-18  a {
+    color: #7C6699;
+}
+
+.category-18 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-ae]]);
+}
+
+/*Nome da disciplina*/
+.category-18 #course-header .heading-info > p:first-child {
+    color: #7c6699; 
+    font-family: BlackChanceryRegular, verdana,arial,helvetica,sans-serif; 
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+} 
+        
+/*Professores*/
+.category-18 #course-header .heading-info > p:first-child + p {
+    font-family: CorbelRegular, verdana,arial,helvetica,sans-serif;
+    color: #ec268f;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+/*Período*/
+.category-18 #course-header .heading-info > p:first-child + p + p {
+    font-family: CorbelRegular, verdana,arial,helvetica,sans-serif; 
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/*Especializações*/
+
+/*Atividade Física e Saúde - 4*/
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+font-family:"AshtonsHand";
+src: url("[[font:theme|ashtonshand.ttf]]") format("truetype");
+font-weight:normal;font-style:normal;
+}
+
+.category-4 a:hover, .category-4 a:focus {
+    color: #FDBE2D;
+}
+
+.category-4 a {
+    color: #D49F28;
+}
+
+.category-4 #course-header div.heading-container[data-custom-heading-image |= false] {
+  background-image: url([[pix:theme|logos/logo-nead-afs]]);
+}
+
+
+.category-4 #course-header .heading-info > p:first-child {
+    color: #FAB60A;
+    font-family: AshtonsHand, verdana,arial,helvetica,sans-serif;
+} 
+
+/*Professores*/
+.category-4 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-4 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+
+/*Ensino de Filosofia do Ensino Médio - 5*/
+
+.category-5 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-efem]]);
+}
+
+
+.category-5 #course-header .heading-info > p:first-child {
+    color: #FFF208;
+    font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif
+} 
+
+/*Professores*/
+.category-5 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-5 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+/*Ensino de Sociologia do Ensino Médio - 7*/
+
+.category-7 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-esem]]);
+}
+
+
+.category-7 #course-header .heading-info > p:first-child {
+    color: #00B1F0;
+    font-family: "Arial Black", Gadget, sans-serif
+} 
+
+/*Professores*/
+.category-7 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-7 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+
+
+/*Ensino de Matemática do Ensino Médio - 6*/
+
+.category-6 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-emem]]);
+}
+
+
+.category-6 #course-header .heading-info > p:first-child {
+    color: #D13438;
+    font-family: "Arial Black", Gadget, sans-serif
+} 
+
+/*Professores*/
+.category-6 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-6 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+
+/*Ensino e Pesquisa na Ciência Geográfica - 8*/
+
+@font-face {
+font-family:"DaunPenh";
+src: url("[[font:theme|daunpenh.ttf]]") format("truetype");
+font-weight:normal;font-style:normal;
+}
+
+.category-8 a:hover, .category-8 a:focus {
+    color: #52658C;
+}
+
+.category-8 a {
+    color: #7189BA;
+}
+
+.category-8 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-epcg]]);
+}
+
+
+.category-8 #course-header .heading-info > p:first-child {
+    color: #545684;
+    font-family: DaunPenh, Georgia, serif
+} 
+
+/*Professores*/
+.category-8 #course-header .heading-info > p:first-child + p {
+    color: #666566;
+}
+
+/*Período*/
+.category-8 #course-header .heading-info > p:first-child + p + p {
+    color: #666566;
+}
+
+
+/*Gestão da Informação e do Conhecimento - 9*/
+
+@font-face {
+font-family:"SimplifiedArabicFixed";
+src: url("[[font:theme|simpfxo.ttf]]") format("truetype");
 font-weight:normal;font-style:normal;
 }
 
 
-.category-2 #page-header .heading-info > p:first-child {
-    color: #99d420;
-    font-family: AdobeDevanagari, verdana,arial,helvetica,sans-serif;
+.category-9 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-gic]]);
+}
+
+
+.category-9 #course-header .heading-info > p:first-child {
+    color: #00ADEF;
+    font-family: SimplifiedArabicFixed, Georgia, serif
 } 
+
+/*Professores*/
+.category-9 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-9 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+/*Intervenção Sociocultural para Contextos Escolares e não Escolares - 10*/
+
+@font-face {
+font-family:"Humans521BtRegular";
+src: url("[[font:theme|humans521btregular.ttf]]") format("truetype");
+font-weight:normal;font-style:normal;
+}
+
+
+.category-10 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-is]]);
+}
+
+
+.category-10 #course-header .heading-info > p:first-child {
+    color: #A2134C;
+    font-family: Humans521BtRegular, Gadget, sans-serif
+} 
+
+/*Professores*/
+.category-10 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-10 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+/*Libras - 11*/
+
+.category-11 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead]]);
+}
+
+
+.category-11 #course-header .heading-info > p:first-child {
+    color: #A2134C;
+    font-family: Humans521BtRegular, Gadget, sans-serif
+} 
+
+/*Professores*/
+.category-11 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-11 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+/*Perspectivas de Ensino de História do Brasil - 12*/
+
+
+.category-12 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-pehb]]);
+}
+
+.category-12 a:hover, .category-12 a:focus {
+    color: #007D42;
+}
+
+.category-12 a {
+    color: #00A859;
+}
+
+.category-12 #course-header .heading-info > p:first-child {
+    color: #99D420;
+    font-family: DaunPenh, Georgia, serif
+} 
+
+/*Professores*/
+.category-12 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-12 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+/*Ensino de Ciências nas Séries do Ensino Fundamental - 13*/
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {font-family:"ASO";src:url("[[font:theme|ASO.eot?]]") format("eot"),
+  url("[[font:theme|ASO.woff]]") format("woff"),
+  url("[[font:theme|ASO.ttf]]") format("truetype"),
+  url("[[font:theme|ASO.svg#ASO]]") format("svg");font-weight:normal;font-style:normal;}
+
+
+.category-13 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-ecsef]]);
+}
+
+
+.category-13 #course-header .heading-info > p:first-child {
+    color: #99D420;
+    font-family: "Arial Black", Gadget, sans-serif
+} 
+
+/*Professores*/
+.category-13 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-13 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+
+/*Educação e Formação Empreendedora - 21*/
+
+
+.category-21 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-efe]]);
+}
+
+
+.category-21 #course-header .heading-info > p:first-child {
+    color: #FBC707;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+} 
+
+/*Professores*/
+.category-21 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-21 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+/*Gestão Escolar - 22*/
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+  font-family:"Strade di Fuoco";src:
+  url("[[font:theme|Strade_di_Fuoco.eot?]]") format("eot"),
+  url("[[font:theme|Strade_di_Fuoco.woff]]") format("woff"),
+  url("[[font:theme|Strade_di_Fuoco.ttf]]") format("truetype"),
+  url("[[font:theme|Strade_di_Fuoco.svg#StradediFuoco]]") format("svg");
+  font-weight:normal;font-style:normal;}
+
+.category-22 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-ge]]);
+}
+
+
+.category-22 #course-header .heading-info > p:first-child {
+    /*color: #FFCC28; desirée*/
+    color: #DF603F;
+    /*font-family: Strade di Fuoco,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;*/
+    font-family: Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+} 
+
+/*Professores*/
+.category-22 #course-header .heading-info > p:first-child + p {
+    color: #000;
+}
+
+/*Período*/
+.category-22 #course-header .heading-info > p:first-child + p + p {
+    color: #000;
+}
+
+
+
+
+/*Formação Continuada - Município: Pinhão/PR - 7*/
+
+.category-25 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-fcip]]);
+}
+
+.category-25 #course-header .heading-container img {
+  visibility: hidden;
+}
+
+.category-25 #course-header .heading-info > p:first-child {
+    color: #00B1F0;
+    font-family: "Arial Black", Gadget, sans-serif
+} 
+
+/*Professores*/
+.category-25 #course-header .heading-info > p:first-child + p {
+    color: #fff;
+}
+
+/*Período*/
+.category-25 #course-header .heading-info > p:first-child + p + p {
+    color: #fff;
+}
+
+
+
+
+/*PACC - 163*/
+
+.category-163 #course-header .heading-container {
+  background-image: url([[pix:theme|logos/logo-nead-pacc]]);
+}
+
+.category-163 #course-header .heading-info > h1 {
+    color: #4D6AB1;
+    font-family: "Arial Black", Gadget, sans-serif
+} 
+
+
+.category-163 #course-header .heading-info > p:first-child {
+    color: #4D6AB1;
+    font-family: "Arial Black", Gadget, sans-serif
+} 
+
+/*Professores*/
+.category-163 #course-header .heading-info > p:first-child + p {
+    color: #000;
+}
+
+/*Período*/
+.category-163 #course-header .heading-info > p:first-child + p + p {
+    color: #7454A1;
+}
+
+
+

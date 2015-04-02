@@ -48,7 +48,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_nead_unicentro/linkcolor';
     $title = get_string('linkcolor', 'theme_nead_unicentro');
     $description = get_string('linkcolor_desc', 'theme_nead_unicentro');
-    $default = '#FF6500';
+    $default = '#3B8DBD';
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
